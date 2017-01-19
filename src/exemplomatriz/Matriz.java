@@ -28,7 +28,7 @@ public class Matriz {
     int resultado;
     do{
     resultado= Integer.parseInt(JOptionPane.showInputDialog("notas:  "));
-    }while (resultado<1|| resultado<10);
+    }while (resultado<1|| resultado>10);
     return resultado;
     }
     
@@ -36,7 +36,7 @@ public class Matriz {
     public void amosarMatriz(){
     for(int f=0; f<notas.length;f++){
         for(int c=0;c<notas[f].length;c++){
-            System.out.println(notas[f][c]+"   ");
+            System.out.println(notas[f][c]+ "   ");
         }
       System.out.println("\n");  
     }
@@ -44,6 +44,9 @@ public class Matriz {
 }
 
     public void calcularMediaNota (){
+        
+        
+        
         
         
                 

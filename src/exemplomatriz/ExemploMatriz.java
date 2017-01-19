@@ -8,7 +8,6 @@ public class ExemploMatriz {
       
         Matriz notas=new Matriz();
         notas.cargarMatriz();
-      
         notas.amosarMatriz();
         
     }
