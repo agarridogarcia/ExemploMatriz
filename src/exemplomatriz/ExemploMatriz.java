@@ -8,7 +8,13 @@ public class ExemploMatriz {
       
         Matriz notas=new Matriz();
         notas.cargarMatriz();
-        notas.amosarMatriz();
+        
+        
+        notas.calcularMediaNota();
+        notas.visualizar();
+        notas.amosarLista();
+        notas.calcularMediaModulo();
+        notas.amosarModulo();
         
     }
 }

@@ -13,6 +13,8 @@ import javax.swing.JOptionPane;
  */
 public class Matriz {
     int [][] notas= new int [3][4];
+    float [] notasmedias=new float[3];
+    float [] mediamodulo=new float[4];
                 
     
     public void cargarMatriz(){
@@ -33,22 +35,61 @@ public class Matriz {
     }
     
     
-    public void amosarMatriz(){
+    /*public void amosarMatriz(){
     for(int f=0; f<notas.length;f++){
+        System.out.print("|");
         for(int c=0;c<notas[f].length;c++){
             System.out.println(notas[f][c]+ "   ");
         }
-      System.out.println("\n");  
+      System.out.print("|\n");  
     }
     
-}
+}*/
+    public void visualizar(){
+        for(int f = 0;f<notas.length;f++){
+            System.out.print("|");
+            for(int c=0; c<notas[f].length;c++){
+                System.out.print(notas[f][c]+" ");
+            }
+            System.out.println("|\n");
+        }
+    }
 
     public void calcularMediaNota (){
         
-        
-        
-        
-        
-                
+        float acumulador;
+        for(int f=0;f<notas.length;f++){
+            acumulador=0;
+            for(int c=0;c<notas.length;c++){
+              acumulador= acumulador +notas[f][c];
+                 
+            } 
+           
+            notasmedias[f]=acumulador/notas[f].length;
+        }
+      
     }
-}
+    public void amosarLista(){
+        for(int i=0; i<notasmedias.length;i++)
+            System.out.println(notasmedias[i]);
+    }
+        
+    public void calcularMediaModulo(){
+        float acumulador;
+        for (int c=0;c<4;c++){
+            acumulador=0;
+            for(int f=0;f<3;f++){
+                acumulador= acumulador +notas[f][c];//as columnas son as que iteran a fila sempre vai ser a mesma
+            }           
+        
+        mediamodulo [c]=acumulador/3;
+        }       
+    }
+    public void amosarModulo(){
+        for(int i=0;i<mediamodulo.length;i++)
+            System.out.println(mediamodulo[i]);
+    }
+        
+}               
+    
+
